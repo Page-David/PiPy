@@ -15,7 +15,7 @@ def pi(digit):
 		t = Decimal(tm-pm*(am-a)**2)
 		p = 2 * pm
 		pi = Decimal((a+b) ** 2/(4*t))
-	return pi
+	return str(pi)
 
 if __name__ == "__main__":
 	print(pi(100))
