@@ -6,11 +6,12 @@ import unbounded_spigot
 import spigot
 import time
 from sage.all import *
+import sys
 
 class Analyser(object):
 	
-	def __init__(self, method_list):
-		self.end = 1000
+	def __init__(self, method_list, last):
+		self.end = int(last)
 		self.start = 100
 		self.step = 100
 		self.time_set = list()
@@ -52,5 +53,5 @@ if __name__ == "__main__":
 				Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi),
 				Pi_Func("Stanley Rabinowitz and Stan Wagon's spigot algorithm", "orange", spigot.pi)
 				]
-	analyse = Analyser(method_list)
+	analyse = Analyser(method_list, sys.argv[1])
 	analyse.run()
