@@ -12,7 +12,9 @@ Accurancy analyse
 
 ## Dependence
 Python 2.7
+
 [Sagemath](www.sagemath.org)
+
 mpmath: avaliable on pip
 `pip install mpmath`
 
