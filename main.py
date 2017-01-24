@@ -1,5 +1,6 @@
 #!/usr/bin/env sage
 import Gauss_Legendre
+import reverse_tan
 import pi_compare
 import time
 from sage.all import *
@@ -28,6 +29,9 @@ class Analyser(object):
 				print d, end_time, accuracy
 			self.figure += list_plot(self.time_set, color = m.color, legend_label = m.name)
 			self.figure2 += list_plot(self.accuracy_list, color = m.color, legend_label = m.name)
+			self.time_set, self.accuracy_list = list(), list()
+		self.figure.axes_labels(["$digits$", "$time$"])
+		self.figure2.axes_labels(["$digits$", "$accurancy$"])
 		save(self.figure.plot(), filename="time.svg")
 		save(self.figure2.plot(), filename="accurancy.svg")
 
@@ -40,6 +44,9 @@ class Pi_Func(object):
 
 
 if __name__ == "__main__":
-	method_list = [Pi_Func("Gauss_Legendre", "red", Gauss_Legendre.pi)]
+	method_list = [
+				Pi_Func("Gauss_Legendre", "red", Gauss_Legendre.pi),
+				Pi_Func("Reverse_Tan", "blue", reverse_tan.pi)
+				]
 	analyse = Analyser(method_list)
 	analyse.run()
