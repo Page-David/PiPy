@@ -13,8 +13,7 @@ Accurancy analyse
 ## Dependence
 Python 2.7
 
-[Sagemath](www.sagemath.org)
+[Sagemath](www.sagemath.org) used for generate data figure
 
-mpmath: avaliable on pip
-`pip install mpmath`
+mpmath avaliable on pip: `pip install mpmath` used in reverse tan algo
 
