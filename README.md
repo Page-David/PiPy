@@ -27,3 +27,6 @@ Some people asked why Python is used, why not a language able to compiled?
 
 First of all, effiency and fast are quite different word. The aim of this project is to analyse different algorithms, but not to calculate more digits ASAP. Also, Python is more easier to get algorithms to work as there are many modules like `mpmath`.
 
+## Contribution or feedback
+Just send an issue or pull request.
+
