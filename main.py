@@ -3,6 +3,7 @@ import Gauss_Legendre
 import reverse_tan
 import pi_compare
 import unbounded_spigot
+import spigot
 import time
 from sage.all import *
 
@@ -48,7 +49,8 @@ if __name__ == "__main__":
 	method_list = [
 				Pi_Func("Gauss_Legendre", "red", Gauss_Legendre.pi),
 				Pi_Func("Reverse_Tan", "blue", reverse_tan.pi),
-				Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi)
+				Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi),
+				Pi_Func("Stanley Rabinowitz and Stan Wagon's spigot algorithm", "orange", spigot.pi)
 				]
 	analyse = Analyser(method_list)
 	analyse.run()
