@@ -11,20 +11,25 @@ class Analyser(object):
 		self.start = 100
 		self.step = 100
 		self.time_set = list()
+		self.accuracy_list = list()
 		self.figure = point((0,0))
-		self.figure2 = None
+		self.figure2 = point((0,0))
 		self.methods = method_list
 	
 	def run(self):
 		for m in self.methods:
 			for d in range(self.start, self.end, self.step):
 				start_time = time.time()
-				m.function(d)
+				res = m.function(d)
 				end_time = time.time() - start_time
 				self.time_set.append((d, end_time))
-				print d, end_time
+				accuracy = pi_compare.compare(res)[0]
+				self.accuracy_list.append(accuracy)
+				print d, end_time, accuracy
 			self.figure += list_plot(self.time_set, color = m.color, legend_label = m.name)
+			self.figure2 += list_plot(self.accuracy_list, color = m.color, legend_label = m.name)
 		save(self.figure.plot(), filename="time.svg")
+		save(self.figure2.plot(), filename="accurancy.svg")
 
 class Pi_Func(object):
 
