@@ -30,7 +30,7 @@ class Analyser(object):
 				self.accuracy_list.append(accuracy)
 				print d, end_time, accuracy
 			self.figure += list_plot(self.time_set, color = m.color, legend_label = m.name)
-			self.figure2 += list_plot(self.accuracy_list, color = m.color, legend_label = m.name)
+			self.figure2 += list_plot(self.accuracy_list, color = m.color)
 			self.time_set, self.accuracy_list = list(), list()
 		self.figure.axes_labels(["$digits$", "$time$"])
 		self.figure2.axes_labels(["$digits$", "$accurancy$"])
