@@ -17,3 +17,13 @@ Python 2.7
 
 mpmath avaliable on pip: `pip install mpmath` used in reverse tan algo
 
+## Usage
+clone the project and run `./main [digits]` for example `./main 1000`
+
+## FAQ
+Why Python?
+
+Some people asked why Python is used, why not a language able to compiled?
+
+First of all, effiency and fast are quite different word. The aim of this project is to analyse different algorithms, but not to calculate more digits ASAP. Also, Python is more easier to get algorithms to work as there are many modules like `mpmath`.
+
