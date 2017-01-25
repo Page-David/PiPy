@@ -1,14 +1,17 @@
 # Py-pi
+### Clculate pi to thousands of digits with Python
 This project is aim to analye bunch of algorithms for thousands of digits of pi using Python. Also the `main.py` is able to test other algorithms if you like.
 
 ## Example output
 Time analyse
 
 <img src="https://cdn.rawgit.com/Page-David/Py-pi/722205cc/time.svg"/>
+So far Gauss Legendre method wins.
 
 Accurancy analyse
 
 <img src="https://cdn.rawgit.com/Page-David/Py-pi/722205cc/accurancy.svg"/>
+Basicly, every algorithm used output right answer.
 
 ## Dependence
 Python 2.7
