@@ -3,17 +3,23 @@
 from mpmath import *
 import pi_compare
 
-mp.dps = 1000
-def pi():
+def pi(digits):
+	mp.dps = digits
 	K, M, L, X, S = 6, mpf('1'), 13591409, 1, mpf('13591409')
-	for i in xrange(0,100):
-		M = (K**3 - K*16) * M / K**3
+	new_S = S
+	for i in xrange(0,1000000):
+		M = (K**3 - K*16) * M / (i+1)**3
 		L += 545140134
 		X *= -262537412640768000
-		S += (M * L) / X
+		new_S += (M * L) / X
 		K += 12
-	return mpf('426880') * mpf('10005').sqrt() / S
+		if new_S == S:
+			break
+		else:
+			S = new_S
+	return str(426880 * mpf('10005').sqrt() / S)
 
-P = pi()
-print P
-print pi_compare.compare(str(P))
+if __name__ == "__main__":
+	P = pi()
+	print P
+	print pi_compare.compare(str(P))
