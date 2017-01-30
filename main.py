@@ -2,6 +2,7 @@
 import Gauss_Legendre_mpmath
 import reverse_tan
 import reverse_tan_John_Machin
+import reverse_tan_Euler
 import pi_compare
 import unbounded_spigot
 import spigot
@@ -56,7 +57,8 @@ if __name__ == "__main__":
 				Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi),
 				Pi_Func("Stanley Rabinowitz and Stan Wagon's spigot algorithm", "orange", spigot.pi),
 				Pi_Func("Chudnovsky algorithm", "black", Chudnovsky.pi),
-				Pi_Func("Reverse_Tan_John_Machin", "yellow", reverse_tan_John_Machin.pi)
+				Pi_Func("Reverse_Tan_John_Machin", "yellow", reverse_tan_John_Machin.pi),
+				Pi_Func("Reverse_Tan_Euler", "dodgerblue", reverse_tan_Euler.pi)
 				]
 	analyse = Analyser(method_list, sys.argv[1])
 	analyse.run()
