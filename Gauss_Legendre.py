@@ -2,6 +2,7 @@
 # Module used Gause Lagendre Algorithm to Calculate pi
 
 from decimal import *
+import pi_compare
 import math
 import time
 
@@ -14,9 +15,10 @@ def pi(digit):
 		b = Decimal(am*bm).sqrt()
 		t = Decimal(tm-pm*(am-a)**2)
 		p = 2 * pm
-		pi = Decimal((a+b) ** 2/(4*t))
+	pi = Decimal((a+b) ** 2/(4*t))
 	return str(pi)
 
 if __name__ == "__main__":
-	print(pi(100))
-	
+	pi = pi(1000)
+	print pi
+	print pi_compare.compare(pi)
