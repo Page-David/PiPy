@@ -2,7 +2,7 @@
 from PiAlgo import *
 import time
 from sage.all import *
-import sys
+import argparse
 
 class Analyser(object):
 	
@@ -44,6 +44,7 @@ class Pi_Func(object):
 
 
 if __name__ == "__main__":
+	# config differet algorithms
 	method_list = [
 				Pi_Func("Gauss_Legendre", "red", Gauss_Legendre_mpmath.pi),
 				Pi_Func("Reverse_Tan", "blue", reverse_tan.pi),
@@ -53,5 +54,12 @@ if __name__ == "__main__":
 				Pi_Func("Reverse_Tan_John_Machin", "yellow", reverse_tan_John_Machin.pi),
 				Pi_Func("Reverse_Tan_Euler", "dodgerblue", reverse_tan_Euler.pi)
 				]
-	analyse = Analyser(method_list, sys.argv[1])
+	# config user parser
+	parser = argparse.ArgumentParser(description = 'Calculate pi to thousands of digits')
+	parser.add_argument('digits', metavar='digits',
+	type=int, help='how many digits of pi you need')
+	args = parser.parse_args()
+	
+	# START
+	analyse = Analyser(method_list, args.digits)
 	analyse.run()
