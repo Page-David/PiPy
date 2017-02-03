@@ -6,10 +6,10 @@ import argparse
 
 class Analyser(object):
 	
-	def __init__(self, method_list, last, max_time):
+	def __init__(self, method_list, last, max_time, step):
 		self.end = last
 		self.start = 10
-		self.step = 10
+		self.step = step
 		self.time_set = list()
 		self.accuracy_list = list()
 		self.figure = point((0,0))
@@ -61,9 +61,12 @@ if __name__ == "__main__":
 	type=int, help='how many digits of pi you need')
 	parser.add_argument('--max-time', default=0.1,
 	dest='second', help='process will stop when algo takes more time to finish (default: 0.1)')
+	parser.add_argument('--step', dest='step', default=10,
+	type=int,
+	help='set step in for loop. Note: smaller step sometimes not mean better output figure')
 	args = parser.parse_args()
 	
 	# START
 	analyse = Analyser(method_list, args.digits,
-	args.second)
+	args.second, args.step)
 	analyse.run()
