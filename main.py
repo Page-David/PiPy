@@ -1,12 +1,5 @@
 #!/usr/bin/env sage
-import Gauss_Legendre_mpmath
-import reverse_tan
-import reverse_tan_John_Machin
-import reverse_tan_Euler
-import pi_compare
-import unbounded_spigot
-import spigot
-import Chudnovsky
+from PiAlgo import *
 import time
 from sage.all import *
 import sys
