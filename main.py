@@ -31,6 +31,9 @@ class Analyser(object):
 			self.figure += list_plot(self.time_set, color = m.color, legend_label = m.name)
 			self.figure2 += list_plot(self.accuracy_list, color = m.color)
 			self.time_set, self.accuracy_list = list(), list()
+			self.plot_fig()
+
+	def plot_fig(self):
 		self.figure.axes_labels(["$digits$", "$time$"])
 		self.figure2.axes_labels(["$digits$", "$accurancy$"])
 		save(self.figure.plot(), filename="time.svg", figsize=10, ymax=self.max_time, xmax=self.end)
