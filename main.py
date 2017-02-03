@@ -12,8 +12,8 @@ class Analyser(object):
 		self.step = step
 		self.time_set = list()
 		self.accuracy_list = list()
-		self.figure = point((0,0))
-		self.figure2 = point((0,0))
+		self.figure = plot([])
+		self.figure2 = plot([])
 		self.methods = method_list
 		self.max_time = max_time
 	
