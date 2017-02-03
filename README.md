@@ -21,7 +21,16 @@ Python 2.7
 mpmath avaliable on pip: `pip install mpmath` used in reverse tan algo
 
 ## Usage
-clone the project and run `./main [digits]` for example `./main 1000`
+clone the repo:
+`git clone https://github.com/Page-David/PiPy.git`
+
+go into this directory:
+`cd PiPy`
+
+Run the python script:
+`./main.py [-h] [--max-time SECOND] [--step STEP] digits`
+
+`./main.py -h` for more help.
 
 ## FAQ
 Why Python?
