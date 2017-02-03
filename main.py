@@ -59,7 +59,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description = 'Calculate pi to thousands of digits')
 	parser.add_argument('digits', metavar='digits',
 	type=int, help='how many digits of pi you need')
-	parser.add_argument('--max-time', default=0.1,
+	parser.add_argument('--max-time', default=0.1, type=float,
 	dest='second', help='process will stop when algo takes more time to finish (default: 0.1)')
 	parser.add_argument('--step', dest='step', default=10,
 	type=int,
