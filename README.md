@@ -5,12 +5,12 @@ This project is aim to analye bunch of algorithms for thousands of digits of pi 
 ## Example output
 Time analyse
 
-<img src="https://cdn.rawgit.com/Page-David/PiPy/13d96001/time.svg"/>
+<img src="https://cdn.rawgit.com/Page-David/PiPy/f96d5d72/time.svg"/>
 So far Gauss Legendre method wins.
 
 Accurancy analyse
 
-<img src="https://cdn.rawgit.com/Page-David/PiPy/13d96001/accurancy.svg"/>
+<img src="https://cdn.rawgit.com/Page-David/PiPy/f96d5d72/accurancy.svg"/>
 Basicly, every algorithm used output right answer.
 
 ## Dependence
