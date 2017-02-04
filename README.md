@@ -28,9 +28,9 @@ go into this directory:
 `cd PiPy`
 
 Run the python script:
-`./main.py [-h] [--max-time SECOND] [--step STEP] digits`
+`./main.sage [-h] [--max-time SECOND] [--step STEP] digits`
 
-`./main.py -h` for more help.
+`./main.sage -h` for more help.
 
 ## FAQ
 Why Python?
