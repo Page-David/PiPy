@@ -63,14 +63,14 @@ class Pi_Func(object):
 if __name__ == "__main__":
 	# config differet algorithms
 	method_list = [
-				Pi_Func("Gauss_Legendre", "red", Gauss_Legendre_mpmath.pi),
-				Pi_Func("Reverse_Tan", "blue", reverse_tan.pi),
-				Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi),
-				Pi_Func("Stanley Rabinowitz and Stan Wagon's spigot algorithm", "orange", spigot.pi),
-				Pi_Func("Chudnovsky algorithm", "black", Chudnovsky.pi),
-				Pi_Func("Reverse_Tan_John_Machin", "yellow", reverse_tan_John_Machin.pi),
-				Pi_Func("Reverse_Tan_Euler", "dodgerblue", reverse_tan_Euler.pi)
-				]
+	    Pi_Func("Gauss_Legendre", "red", Gauss_Legendre_mpmath.pi),
+	    Pi_Func("Reverse_Tan", "blue", reverse_tan.pi),
+	    Pi_Func("Jeremy Gibbons's Unbounded Spigot", "green", unbounded_spigot.pi),
+	    Pi_Func("Stanley Rabinowitz and Stan Wagon's spigot algorithm", "orange", spigot.pi),
+	    Pi_Func("Chudnovsky algorithm", "black", Chudnovsky.pi),
+	    Pi_Func("Reverse_Tan_John_Machin", "yellow", reverse_tan_John_Machin.pi),
+	    Pi_Func("Reverse_Tan_Euler", "dodgerblue", reverse_tan_Euler.pi)
+	]
 	# config user parser
 	parser = argparse.ArgumentParser(description = 'Calculate pi to thousands of digits')
 	parser.add_argument('digits', metavar='digits',
